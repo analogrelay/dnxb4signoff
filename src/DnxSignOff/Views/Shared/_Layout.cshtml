@@ -21,7 +21,16 @@
         </div>
     </header>
     <div class="container">
-        @RenderBody()
+        <div class="columns">
+            <div class="one-fourth column">
+                <nav class="menu">
+                    <a class="menu-item" href="#">Something</a>
+                </nav>
+            </div>
+            <div class="three-fourths column">
+                @RenderBody()
+            </div>
+        </div>
     </div>
 </body>
 </html>
