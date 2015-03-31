@@ -1,0 +1,41 @@
+﻿@model DnxSignOff.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h1 class="page-title">@ViewBag.Title.</h1>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Create a new account.</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <dl class="form">
+        <dt>@Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })</dt>
+        <dd>
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+        </dd>
+    </dl>
+    <dl class="form">
+        <dt>@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })</dt>
+        <dd>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+        </dd>
+    </dl>
+    <dl class="form">
+        <dt>@Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })</dt>
+        <dd>
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+        </dd>
+    </dl>
+    <div>
+        <input type="submit" class="btn btn-primary" value="Register" />
+    </div>
+}
+
+@section Scripts {
+    <script src="@Url.Content("~/lib/jquery-validation/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js")"></script>
+}

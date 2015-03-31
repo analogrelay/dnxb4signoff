@@ -21,7 +21,10 @@ gulp.task("clean", function (cb) {
 gulp.task("bower", function () {
     var bower = {
         "primer-css": "primer-css/css/primer.css",
-        "octicons": "octicons/octicons/octicons.{css,eot,svg,ttf,woff}"
+        "octicons": "octicons/octicons/octicons.{css,eot,svg,ttf,woff}",
+        "jquery": "jquery/dist/jquery.{min.js,js,map}",
+        "jquery-validation": "jquery-validation/dist/jquery.validate.{min.js,js}",
+        "jquery-validation-unobtrusive": "jquery-validation-unobtrusive/jquery.validate.unobtrusive.{min.js,js}",
     }
 
     for (var destinationDir in bower) {

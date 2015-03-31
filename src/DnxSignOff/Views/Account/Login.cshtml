@@ -1,0 +1,51 @@
+﻿@model DnxSignOff.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+<h1 class="page-title">@ViewBag.Title.</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4>Use a local account to log in.</h4>
+                <p>
+                    @Html.ActionLink("Register", "Register") if you don't have a local account.
+                </p>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <dl class="form">
+                    <dt>@Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })</dt>
+                    <dd>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </dd>
+                </dl>
+                <dl class="form">
+                    <dt>@Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })</dt>
+                    <dd>
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </dd>
+                </dl>
+                <div class="form-checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        <em class="highlight">Remember me?</em>
+                    </label>
+                </div>
+                <div>
+                    <input type="submit" value="Log in" class="btn btn-primary" />
+                </div>
+            }
+        </section>
+    </div>
+</div>
+@section Scripts {
+    <script src="@Url.Content("~/lib/jquery-validation/jquery.validate.js")"></script>
+    <script src="@Url.Content("~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js")"></script>
+}
