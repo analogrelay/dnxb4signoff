@@ -1,23 +1,28 @@
 ﻿{
-  "webroot": "wwwroot",
-  "version": "1.0.0-*",
-  "dependencies": {
-    "Microsoft.AspNet.Server.IIS": "1.0.0-beta5-11379"
-  },
-  "frameworks": {
-    "dnx451": { },
-    "dnxcore50": { }
-  },
-  "bundleExclude": [
-    "node_modules",
-    "bower_components",
-    "**.xproj",
-    "**.user",
-    "**.vspscc"
-  ],
-  "exclude": [
-    "wwwroot",
-    "node_modules",
-    "bower_components"
-  ]
+    "webroot": "wwwroot",
+    "version": "1.0.0-*",
+    "dependencies": {
+        "Microsoft.AspNet.Mvc": "6.0.0-beta4-*",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta4-*"
+    },
+    "frameworks": {
+        "dnx451": { },
+        "dnxcore50": { }
+    },
+    "publishExclude": [
+        "node_modules",
+        "bower_components",
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ],
+    "exclude": [
+        "wwwroot",
+        "node_modules",
+        "bower_components"
+    ],
+    "scripts": {
+        "postrestore": [ "npm install", "bower install" ],
+        "prepare": [ "gulp copy" ]
+    }
 }

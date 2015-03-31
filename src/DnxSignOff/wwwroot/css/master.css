@@ -1,0 +1,18 @@
+.masthead {
+  background-color: #6E5494;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .masthead a.masthead-logo {
+    color: #FFF;
+    float: left;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none; }
+  .masthead nav.masthead-nav {
+    float: right;
+    font-size: 1rem;
+    margin-top: 0.5rem; }
+    .masthead nav.masthead-nav a {
+      color: #FFF;
+      display: inline-block;
+      text-decoration: none; }

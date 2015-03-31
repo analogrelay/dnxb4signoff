@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="~/lib/octicons/octicons.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/primer-css/primer.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/master.css?v=@DateTime.Now.ToString("O")" />
+</head>
+<body>
+    <header class="masthead">
+        <div class="container">
+            <a class="masthead-logo" href="~/">
+                <span class="mega-octicon octicon-circuit-board"></span>
+                ASP.NET Team Dashboard
+            </a>
+            <nav class="masthead-nav">
+                <a href="#">
+                    <span class="octicon octicon-mark-github"></span>
+                    Sign In
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>

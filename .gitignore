@@ -197,3 +197,4 @@ FakesAssemblies/
 
 # DNX-related projects have a project.lock.json which should not be checked in by default
 project.lock.json
+**/wwwroot/lib/

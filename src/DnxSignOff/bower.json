@@ -1,0 +1,7 @@
+{
+	"name": "DnxSignOff",
+	"private": true,
+	"dependencies": {
+        "primer-css": "2.0.3"
+	}
+}
