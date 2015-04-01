@@ -24,6 +24,8 @@ namespace DnxSignOff
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseErrorPage();
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
