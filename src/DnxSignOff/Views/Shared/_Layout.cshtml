@@ -13,22 +13,6 @@
                 <span class="mega-octicon octicon-squirrel"></span>
                 ASP.NET Team Dashboard
             </a>
-            <nav class="masthead-nav">
-                @if (Context.User != null && Context.User.Identity.IsAuthenticated)
-                {
-                    <a href="#">@Context.User.Identity.Name</a>
-                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { style = "display: inline-block" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <input type="submit" value="Log Off" class="btn-link" />
-                    }
-                }
-                else
-                {
-                    @Html.ActionLink("Register", "Register", "Account")
-                    @Html.ActionLink("Log In", "Login", "Account")
-                }
-            </nav>
         </div>
     </header>
     <div class="container">
