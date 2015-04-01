@@ -2,8 +2,7 @@
 
 var gulp = require("gulp"),
   rimraf = require("rimraf"),
-  fs = require("fs"),
-  sass = require("gulp-sass");
+  fs = require("fs");
 
 eval("var project = " + fs.readFileSync("./project.json"));
 
@@ -21,6 +20,7 @@ gulp.task("clean", function (cb) {
 gulp.task("bower", function () {
     var bower = {
         "primer-css": "primer-css/css/primer.css",
+        "primer-markdown": "primer-markdown/dist/user-content.css",
         "octicons": "octicons/octicons/octicons.{css,eot,svg,ttf,woff}",
         "jquery": "jquery/dist/jquery.{min.js,js,map}",
         "jquery-validation": "jquery-validation/dist/jquery.validate.{min.js,js}",
@@ -33,11 +33,5 @@ gulp.task("bower", function () {
     }
 });
 
-gulp.task("sass", function () {
-    gulp.src(paths.scss + '*.scss')
-            .pipe(sass())
-            .pipe(gulp.dest(paths.css));
-});
-
-gulp.task("build", ["sass", "bower"], function () {
+gulp.task("build", ["bower"], function () {
 });

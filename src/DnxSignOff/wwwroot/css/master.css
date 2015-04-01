@@ -1,19 +1,33 @@
+﻿.container {
+}
+
 .masthead {
-  background-color: #6E5494;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem; }
-  .masthead a.masthead-logo {
-    color: #FFF;
-    float: left;
-    display: inline-block;
-    font-size: 1.5rem;
-    text-decoration: none; }
-  .masthead nav.masthead-nav {
-    float: right;
-    font-size: 1rem;
-    margin-top: 0.5rem; }
-    .masthead nav.masthead-nav a {
-      color: #FFF;
-      display: inline-block;
-      text-decoration: none; }
+    background-color: #6E5495;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+    .masthead a.masthead-logo {
+        color: #FFF;
+        float: left;
+        display: inline-block;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+    .masthead nav.masthead-nav {
+        float: right;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+        .masthead nav.masthead-nav a, .masthead nav.masthead-nav input.btn-link {
+            color: #FFF;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+            .masthead nav.masthead-nav a:not(:last-child) {
+                margin-right: 1.25rem;
+            }

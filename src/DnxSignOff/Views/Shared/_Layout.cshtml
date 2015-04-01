@@ -3,19 +3,25 @@
 <head>
     <link rel="stylesheet" type="text/css" href="~/lib/octicons/octicons.css" />
     <link rel="stylesheet" type="text/css" href="~/lib/primer-css/primer.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/primer-markdown/user-content.css" />
     <link rel="stylesheet" type="text/css" href="~/css/master.css?v=@DateTime.Now.ToString("O")" />
 </head>
 <body>
     <header class="masthead">
         <div class="container">
             <a class="masthead-logo" href="~/">
-                <span class="mega-octicon octicon-circuit-board"></span>
+                <span class="mega-octicon octicon-squirrel"></span>
                 ASP.NET Team Dashboard
             </a>
             <nav class="masthead-nav">
-                @if (Context.User != null)
+                @if (Context.User != null && Context.User.Identity.IsAuthenticated)
                 {
                     <a href="#">@Context.User.Identity.Name</a>
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { style = "display: inline-block" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="submit" value="Log Off" class="btn-link" />
+                    }
                 }
                 else
                 {
@@ -32,7 +38,7 @@
                     <a class="menu-item" href="#">Something</a>
                 </nav>
             </div>
-            <div class="three-fourths column">
+            <div class="three-fourths column markdown-body">
                 @RenderBody()
             </div>
         </div>

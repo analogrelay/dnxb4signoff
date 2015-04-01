@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DnxSignOff", "src\DnxSignOff\DnxSignOff.xproj", "{C16B7350-50B3-42B4-9FC0-9C21944FA36A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DnxSignOff.StarterForCopying", "src\DnxSignOff.StarterForCopying\DnxSignOff.StarterForCopying.xproj", "{D8C32760-2692-41C3-8381-D8301E7A5497}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "StarterSiteForCopying", "src\StarterSiteForCopying\StarterSiteForCopying.xproj", "{7D6D80D9-B275-4A1A-8250-DAD7A113FE18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,16 +24,16 @@ Global
 		{C16B7350-50B3-42B4-9FC0-9C21944FA36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C16B7350-50B3-42B4-9FC0-9C21944FA36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C16B7350-50B3-42B4-9FC0-9C21944FA36A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8C32760-2692-41C3-8381-D8301E7A5497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8C32760-2692-41C3-8381-D8301E7A5497}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8C32760-2692-41C3-8381-D8301E7A5497}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8C32760-2692-41C3-8381-D8301E7A5497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6D80D9-B275-4A1A-8250-DAD7A113FE18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6D80D9-B275-4A1A-8250-DAD7A113FE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6D80D9-B275-4A1A-8250-DAD7A113FE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6D80D9-B275-4A1A-8250-DAD7A113FE18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C16B7350-50B3-42B4-9FC0-9C21944FA36A} = {16C603FE-DBAB-471F-83EA-1EBA85FD2072}
-		{D8C32760-2692-41C3-8381-D8301E7A5497} = {16C603FE-DBAB-471F-83EA-1EBA85FD2072}
+		{7D6D80D9-B275-4A1A-8250-DAD7A113FE18} = {16C603FE-DBAB-471F-83EA-1EBA85FD2072}
 	EndGlobalSection
 EndGlobal
